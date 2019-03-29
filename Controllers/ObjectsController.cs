@@ -32,7 +32,7 @@ namespace S3Files.Controllers
             }
         }
 
-        [HttpGet("{key:int}")]
+        [HttpGet("{fileId:int}")]
         public ActionResult<string> GetObject(int fileId)
         {
             using (var client = new AmazonS3Client(RegionEndpoint.USEast2))
